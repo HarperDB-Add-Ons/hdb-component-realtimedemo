@@ -51,6 +51,52 @@ function Publish({ publishState, setPublishState }) {
                   </Button>
                 </Col>
               </Row>
+              <div className={`pricing ${key}`}>
+                <Row>
+                  <Col xs={4} className="text-nowrap py-1">
+                    Publish
+                  </Col>
+                  <Col xs={4} className="text-nowrap py-1">
+                    Clients
+                  </Col>
+                  <Col xs={4} className="text-nowrap py-1">
+                    Monthly
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    1k @ 1/sec
+                  </Col>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    1k
+                  </Col>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    {key === 'harperdb' ? '$1k' : '$2k'}
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    1k @ 1/sec
+                  </Col>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    100k
+                  </Col>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    {key === 'harperdb' ? '$25k' : '$50k'}
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    1k @ 10/sec
+                  </Col>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    1MM
+                  </Col>
+                  <Col xs={4} className="py-1 text-nowrap">
+                    {key === 'harperdb' ? '$150k' : '$500k'}
+                  </Col>
+                </Row>
+              </div>
             </CardBody>
           </Card>
         </Col>

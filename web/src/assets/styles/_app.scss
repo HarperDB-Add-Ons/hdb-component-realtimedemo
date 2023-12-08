@@ -62,7 +62,17 @@
 }
 
 .pricing{
-  .border-bottom {
+  display: none;
+  padding: 0 15px;
+  border-top: 1px solid $faint-white-overlay !important;
+  margin-top: 12px;
+  color: $whiter-overlay;
+
+  &.harperdb {
+    color: $color-white;
+  }
+
+  .row {
     border-bottom: 1px solid $faint-white-overlay !important;
   }
 }

@@ -5,7 +5,6 @@ import useAsyncEffect from 'use-async-effect';
 import Publish from './shared/Publish';
 import HarperDB from './shared/HarperDB';
 import Client from './shared/Client';
-import Pricing from './shared/Pricing';
 
 import config from '../config';
 
@@ -58,7 +57,6 @@ function App() {
           <h5 className="text-white text-nowrap">EdgeTL Demo</h5>
         </Navbar>
         <div id="app-container">
-          <Pricing />
           <Publish publishState={publishState} setPublishState={setPublishState} />
           <HarperDB />
           <Client setSubscribeState={setSubscribeState} recordTimestamp={recordTimestamp} authenticated={authenticated} />
