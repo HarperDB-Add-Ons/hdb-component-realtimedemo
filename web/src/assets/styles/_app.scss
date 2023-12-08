@@ -60,3 +60,9 @@
   border: 1px solid $faint-white-overlay;
   color: $color-white;
 }
+
+.pricing{
+  .border-bottom {
+    border-bottom: 1px solid $faint-white-overlay !important;
+  }
+}

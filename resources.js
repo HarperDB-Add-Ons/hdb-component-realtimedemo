@@ -7,6 +7,8 @@ import mongodbCDC from './dbs/mongodb/cdc.js';
 import datastaxIngest from './dbs/datastax/ingest.js';
 import datastaxCDC from './dbs/datastax/cdc.js';
 
+import harperdbIngest from './dbs/harperdb/ingest.js';
+
 export class api extends tables.edgetl {
   subscribe(options) {
     if (options) options.omitCurrent = true;
@@ -21,6 +23,8 @@ export class api extends tables.edgetl {
       result = await mongodbIngest({ logger, qty });
     } else if (origin === 'datastax') {
       result = await datastaxIngest({ logger, qty });
+    } else if (origin === 'harperdb') {
+      result = await harperdbIngest({ logger, qty, table: tables.edgetl });
     }
     return result;
   }

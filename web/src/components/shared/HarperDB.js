@@ -20,7 +20,7 @@ function HarperDB() {
                 <CardBody>
                   <Row className="text-nowrap">
                     <Col className="content-column icon">
-                      <div className="logo dog" />
+                      <div className="logo harperdb" />
                     </Col>
                     <Col xs="auto" className="content-column text-nowrap overflow-hidden text-end">
                       <h6>{location}</h6>
