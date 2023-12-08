@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "name": "edgetl-demo",
+  "version": "0.1.0",
+  "description": "A demonstration of HarperDB's ability to subscribe to changes in external databases and deliver REST and Real-Time interfaces across the edge.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix dbs routes"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.465.0",
+    "@aws-sdk/client-dynamodb-streams": "^3.465.0",
+    "@aws-sdk/credential-providers": "^3.465.0",
+    "@aws-sdk/lib-dynamodb": "^3.465.0",
+    "@faker-js/faker": "^8.3.1",
+    "avro-js": "^1.11.3",
+    "cassandra-driver": "^4.7.2",
+    "dynamodb-stream": "^1.1.4",
+    "dynamodb-stream-emitter": "^0.2.0",
+    "mongodb": "^6.3.0",
+    "pg": "^8.11.3",
+    "pulsar-client": "^1.9.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0"
+  }
+}

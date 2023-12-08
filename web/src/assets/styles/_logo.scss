@@ -1,0 +1,55 @@
+.logo {
+  display: inline-block;
+  margin-right: 12px;
+  border: 0;
+  width: 38px;
+  height: 38px;
+  background-color: $white-overlay;
+  border-radius: $border-radius;
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &.dog {
+    background-image: url('../images/logo_dog_only.png');
+  }
+
+  &.dynamodb {
+    background-image: url('../images/dynamodb.png');
+  }
+
+  &.mongodb {
+    background-image: url('../images/mongodb.png');
+  }
+
+  &.datastax {
+    background-image: url('../images/datastax.png');
+  }
+
+  &.api {
+    &::before {
+      color: $color-white;
+      content: '\f1e0';
+      font-family: 'Font Awesome 5 Solid', sans-serif;
+      font-size: 22px;
+    }
+  }
+
+  &.code{
+    &::before{
+      color: $color-white;
+      content: '\f121';
+      font-family: 'Font Awesome 5 Solid', sans-serif;
+      font-size: 22px;
+    }
+  }
+
+  &.client{
+    &::before{
+      color: $color-white;
+      content: '\f3cd';
+      font-family: 'Font Awesome 5 Solid', sans-serif;
+      font-size: 22px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.harperdb-row {
+  border: 1px solid $white-overlay;
+  color: $color-white;
+  margin-bottom: 40px;
+  position: relative;
+  border-radius: $border-radius;
+
+  .load-balancer {
+    padding: 10px;
+    text-align: center;
+    background: $faint-white-overlay;
+
+    &.top {
+      border-bottom: 1px solid $white-overlay;
+    }
+
+    &.bottom {
+      border-top: 1px solid $white-overlay;
+    }
+  }
+
+  .instance-container {
+    padding: 20px;
+    @media screen and (max-width: 1199px) {
+      padding-bottom: 5px !important;
+    }
+  }
+
+  .row {
+    --bs-gutter-x: 40px;
+    @media screen and (max-width: 1199px) {
+      --bs-gutter-x: 15px !important;
+    }
+  }
+
+  .card {
+      margin-bottom: 0 !important;
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 15px !important;
+    }
+
+
+    &::before {
+      content: '\f061';
+      font-family: 'Font Awesome 5 Solid', sans-serif;
+      font-size: 18px;
+      left: -24px;
+      position: absolute;
+      top: calc(50% - 9px);;
+    }
+
+    &::after {
+      content: '\f060';
+      font-family: 'Font Awesome 5 Solid', sans-serif;
+      font-size: 18px;
+      left: calc(100% + 7px);
+      position: absolute;
+      top: calc(50% - 9px);;
+    }
+  }
+
+  .harperdb-column {
+    &:first-child {
+      .card::before {
+        content: none;
+      }
+    }
+
+    &:last-child {
+      .card::after {
+        content: none;
+      }
+    }
+
+    @media screen and (max-width: 1199px) {
+      .card::before,
+      .card::after {
+        content: none !important;
+      }
+    }
+  }
+}

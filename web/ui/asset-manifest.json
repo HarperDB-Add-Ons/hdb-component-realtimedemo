@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ui/static/css/main.b833f649.css",
+    "main.js": "/ui/static/js/main.d44d4f2d.js",
+    "static/media/datastax.png": "/ui/static/media/datastax.fca02015d22dc5f43aaa.png",
+    "static/media/dynamodb.png": "/ui/static/media/dynamodb.fc665d2753c94744d5a5.png",
+    "static/media/mongodb.png": "/ui/static/media/mongodb.433f90fbc47b025e4d5b.png",
+    "index.html": "/ui/index.html",
+    "main.b833f649.css.map": "/ui/static/css/main.b833f649.css.map",
+    "main.d44d4f2d.js.map": "/ui/static/js/main.d44d4f2d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b833f649.css",
+    "static/js/main.d44d4f2d.js"
+  ]
+}

@@ -1,0 +1,7 @@
+type edgetl @table @export(name: "api") {
+    id: ID @primaryKey
+    origin: String @indexed
+    content: String
+    updated_time: Float @updatedTime
+    origin_insert_time: Float @indexed
+}

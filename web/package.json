@@ -1,0 +1,57 @@
+{
+  "name": "harperdb-example-react-ui",
+  "version": "0.1.0",
+  "private": true,
+  "author": "harperdb",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@uidotdev/usehooks": "^2.4.1",
+    "bootstrap-scss": "^5.0.1",
+    "mqtt": "^5.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.0.0",
+    "reactstrap": "^9.0.1",
+    "use-async-effect": "^2.2.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "BUILD_PATH=./ui PUBLIC_URL=/ui react-scripts build",
+    "lint": "eslint --fix src && npx stylelint --fix \"src/**/*.scss\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "postcss-custom-properties": "^13.3.2",
+    "prettier": "^3.1.0",
+    "sass": "^1.46.0",
+    "stylelint": "^16.0.1",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard": "^35.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^5.3.1"
+  }
+}

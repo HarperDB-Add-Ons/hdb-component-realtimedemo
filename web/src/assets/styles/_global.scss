@@ -1,0 +1,34 @@
+.clickable {
+  cursor: pointer;
+}
+
+hr {
+  background-color: $color-white; /* Modern Browsers */
+  border: 0 none;
+  /* Set the hr color */
+  color: $color-white; /* old IE */
+  height: 1px !important;
+  overflow: hidden;
+}
+
+.card {
+  background: $faint-white-overlay;
+  border: 1px solid $faint-white-overlay;
+  color: $color-white;
+}
+
+::-webkit-scrollbar {
+  height: $scrollbar-width;
+  width: $scrollbar-width;
+}
+
+::-webkit-scrollbar-track {
+  background: $white-overlay;
+  border: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $white-overlay;
+  border: 0;
+  border-radius: 0;
+}
