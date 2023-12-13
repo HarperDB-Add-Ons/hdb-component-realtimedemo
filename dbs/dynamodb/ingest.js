@@ -2,7 +2,7 @@ import { BatchWriteItemCommand, DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { fromIni } from '@aws-sdk/credential-providers';
 import { faker } from '@faker-js/faker';
 
-import config from '../../config.js';
+import config from '../credentials/credentials.js';
 const { dynamodb } = config;
 
 const ingest = async ({ logger, qty }) => {
@@ -18,7 +18,7 @@ const ingest = async ({ logger, qty }) => {
 
   const client = new DynamoDBClient({
     region: dynamodb.region,
-    credentials: fromIni(),
+    credentials: fromIni({ filepath: dynamodb.credentialsFilepath }),
   });
 
   const command = new BatchWriteItemCommand({

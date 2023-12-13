@@ -1,6 +1,6 @@
 import Pulsar from 'pulsar-client';
 
-import config from '../../config.js';
+import config from '../credentials/credentials.js';
 const { datastax } = config;
 
 const authentication = new Pulsar.AuthenticationToken({ token: datastax.token });

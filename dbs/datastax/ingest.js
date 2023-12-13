@@ -1,7 +1,7 @@
 import { Client } from 'cassandra-driver';
 import { faker } from '@faker-js/faker';
 
-import config from '../../config.js';
+import config from '../credentials/credentials.js';
 const { datastax } = config;
 
 const ingest = async ({ logger, qty }) => {

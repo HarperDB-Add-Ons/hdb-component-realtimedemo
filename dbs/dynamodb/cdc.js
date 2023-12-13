@@ -4,13 +4,14 @@ import { DynamoDBStreams } from '@aws-sdk/client-dynamodb-streams';
 import { unmarshall } from '@aws-sdk/util-dynamodb';
 import { fromIni } from '@aws-sdk/credential-providers';
 
-import config from '../../config.js';
+import config from '../credentials/credentials.js';
 const { dynamodb } = config;
 
 const cdc = async ({ logger, table }) => {
+  logger.notify(dynamodb);
   const ddb = new DynamoDB({
     region: dynamodb.region,
-    credentials: fromIni(),
+    credentials: fromIni({ filepath: dynamodb.credentialsFilepath }),
   });
   const ddbStream = new DynamoDBStream(new DynamoDBStreams(), dynamodb.streamArn, unmarshall);
 

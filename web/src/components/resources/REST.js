@@ -39,7 +39,7 @@ function REST({ recordTimestamp, setTotalRecords }) {
       <CardBody>
         <Row className="text-nowrap">
           <Col xs={8}>
-            <h6>REST</h6>
+            <h6>REST (POLL)</h6>
           </Col>
           <Col xs={4} className="text-end">
             <h6>

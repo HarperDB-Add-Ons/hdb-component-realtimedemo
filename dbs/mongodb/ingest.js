@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 import { faker } from '@faker-js/faker';
 
-import config from '../../config.js';
+import config from '../credentials/credentials.js';
 const { mongodb } = config;
 
 const ingest = async ({ logger, qty }) => {
