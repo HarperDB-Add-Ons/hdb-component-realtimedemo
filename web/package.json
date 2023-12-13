@@ -52,6 +52,6 @@
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-config-standard": "^35.0.0",
     "stylelint-order": "^6.0.3",
-    "stylelint-scss": "^5.3.1"
+    "stylelint-scss": "^6.0.0"
   }
 }
