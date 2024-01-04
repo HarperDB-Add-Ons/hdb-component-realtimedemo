@@ -16,8 +16,8 @@
     "use-async-effect": "^2.2.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "BUILD_PATH=./ui PUBLIC_URL=/ui react-scripts build",
+    "start": "HTTPS=true react-scripts start",
+    "build": "BUILD_PATH=.. /ui react-scripts build",
     "lint": "eslint --fix src && npx stylelint --fix \"src/**/*.scss\""
   },
   "eslintConfig": {

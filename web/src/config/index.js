@@ -19,9 +19,13 @@ export default {
       key: 'datastax',
     },
     {
+      label: 'Ditto',
+      key: 'ditto',
+    },
+    /* {
       label: 'HarperDB',
       key: 'harperdb',
-    },
+    }, */
   ],
   subscriberTypes: ['MQTTWS', 'SSE', 'WS', 'REST'],
 };

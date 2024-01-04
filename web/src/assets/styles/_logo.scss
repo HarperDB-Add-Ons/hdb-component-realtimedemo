@@ -26,6 +26,10 @@
     background-image: url('../images/datastax.png');
   }
 
+  &.ditto {
+    background-image: url('../images/ditto.png');
+  }
+
   &.api {
     &::before {
       color: $color-white;

@@ -1,7 +1,9 @@
 # dependencies
 /node_modules
 
-dbs/credentials/*
+dbs/credentials/aws.credentials
+dbs/credentials/credentials.js
+dbs/credentials/datastax.secureconnect.zip
 
 # auth
 config.js

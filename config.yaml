@@ -11,5 +11,5 @@ fastifyRoutes: # This loads files that define fastify routes using fastify's aut
   files: routes/*.js # specify the location of route definition modules
   path: . # relative to the app-name, like  http://server/app-name/route-name
 static: # This allows static files to be directly accessible
-  root: web
-  files: web/ui/**
+  root: ui
+  files: ui/**

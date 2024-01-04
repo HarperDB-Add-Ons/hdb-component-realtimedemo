@@ -8,7 +8,6 @@ import config from '../credentials/credentials.js';
 const { dynamodb } = config;
 
 const cdc = async ({ logger, table }) => {
-  logger.notify(dynamodb);
   const ddb = new DynamoDB({
     region: dynamodb.region,
     credentials: fromIni({ filepath: dynamodb.credentialsFilepath }),
