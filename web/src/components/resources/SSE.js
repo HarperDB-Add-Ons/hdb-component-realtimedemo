@@ -4,23 +4,20 @@ import { Col, Row, Card, CardBody } from 'reactstrap';
 import DataScroller from '../shared/DataScroller';
 import config from '../../config';
 
-function SSE({ setSubscribeState, authenticated }) {
+function SSE({ setSubscribeState }) {
   useEffect(() => {
-    if (authenticated) {
-      const eventSource = new EventSource(`http${config.hdbSSL ? 's' : ''}://${config.hdbUrl}/${config.hdbResource}`, { withCredentials: true });
-      // eslint-disable-next-line
-      console.log(eventSource);
-      eventSource.addEventListener('put', (event) => {
-        const newRecord = JSON.parse(event.data);
-        if (newRecord?.origin_insert_time) {
-          window.records?.SSE.unshift(newRecord);
-          setSubscribeState(newRecord);
-        }
-      });
-      return () => eventSource.close();
-    }
-    return () => false;
-  }, [setSubscribeState, authenticated]);
+    const eventSource = new EventSource(`http${config.hdbSSL ? 's' : ''}://${config.hdbUrl}/${config.hdbResource}`, { withCredentials: true });
+    // eslint-disable-next-line
+    console.log(eventSource);
+    eventSource.addEventListener('put', (event) => {
+      const newRecord = JSON.parse(event.data);
+      if (newRecord?.origin_insert_time) {
+        window.records?.SSE.unshift(newRecord);
+        setSubscribeState(newRecord);
+      }
+    });
+    return () => eventSource.close();
+  }, [setSubscribeState]);
 
   return (
     <Card className="mb-5">

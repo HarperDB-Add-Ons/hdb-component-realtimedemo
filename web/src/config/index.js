@@ -2,7 +2,7 @@ export default {
   hdbUrl: `${window.location.hostname}:9926`,
   hdbSSL: window.location.protocol === 'https:',
   hdbAuth: 'Basic SERCX0FETUlOOnBhc3N3b3Jk',
-  hdbLocations: ['LA', 'DC', 'Paris', 'Tokyo'],
+  hdbLocations: ['Paris', 'Sydney', 'New York', 'Seattle'],
   hdbResource: 'api',
   publishQty: 3,
   originDBs: [
@@ -14,18 +14,14 @@ export default {
       label: 'Atlas',
       key: 'mongodb',
     },
-    {
+    /* {
       label: 'DataStax',
       key: 'datastax',
-    },
+    }, */
     {
-      label: 'Ditto',
-      key: 'ditto',
-    },
-    /* {
       label: 'HarperDB',
       key: 'harperdb',
-    }, */
+    },
   ],
-  subscriberTypes: ['MQTTWS', 'SSE', 'WS', 'REST'],
+  subscriberTypes: ['MQTTWS', 'WS', 'REST'],
 };

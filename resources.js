@@ -7,9 +7,6 @@ import mongodbCDC from './dbs/mongodb/cdc.js';
 import datastaxIngest from './dbs/datastax/ingest.js';
 import datastaxCDC from './dbs/datastax/cdc.js';
 
-import dittoIngest from './dbs/ditto/ingest.js';
-import dittoCDC from './dbs/ditto/cdc.js';
-
 import harperdbIngest from './dbs/harperdb/ingest.js';
 
 export class api extends tables.edgetl {
@@ -26,8 +23,6 @@ export class api extends tables.edgetl {
       result = await mongodbIngest({ logger, qty });
     } else if (origin === 'datastax') {
       result = await datastaxIngest({ logger, qty });
-    } else if (origin === 'ditto') {
-      result = await dittoIngest({ logger, qty });
     } else if (origin === 'harperdb') {
       result = await harperdbIngest({ logger, qty, table: tables.edgetl });
     }
@@ -45,5 +40,4 @@ if (server.workerIndex === 1) {
   dynamodbCDC({ logger, table: tables.edgetl });
   mongodbCDC({ logger, table: tables.edgetl });
   datastaxCDC({ logger, table: tables.edgetl });
-  // dittoCDC({ logger, table: tables.edgetl });
 }

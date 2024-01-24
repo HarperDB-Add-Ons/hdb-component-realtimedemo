@@ -4,21 +4,18 @@ import { Col, Row, Card, CardBody } from 'reactstrap';
 import DataScroller from '../shared/DataScroller';
 import config from '../../config';
 
-function WS({ setSubscribeState, authenticated }) {
+function WS({ setSubscribeState }) {
   useEffect(() => {
-    if (authenticated) {
-      const eventSource = new WebSocket(`ws${config.hdbSSL ? 's' : ''}://${config.hdbUrl}/${config.hdbResource}`);
-      eventSource.addEventListener('message', (event) => {
-        const newRecord = JSON.parse(event.data).value;
-        if (newRecord?.origin_insert_time) {
-          window.records?.WS.unshift(newRecord);
-          setSubscribeState(newRecord);
-        }
-      });
-      return () => eventSource.close();
-    }
-    return () => false;
-  }, [setSubscribeState, authenticated]);
+    const eventSource = new WebSocket(`ws${config.hdbSSL ? 's' : ''}://${config.hdbUrl}/${config.hdbResource}`);
+    eventSource.addEventListener('message', (event) => {
+      const newRecord = JSON.parse(event.data).value;
+      if (newRecord?.origin_insert_time) {
+        window.records?.WS.unshift(newRecord);
+        setSubscribeState(newRecord);
+      }
+    });
+    return () => eventSource.close();
+  }, [setSubscribeState]);
 
   return (
     <Card className="mb-5">

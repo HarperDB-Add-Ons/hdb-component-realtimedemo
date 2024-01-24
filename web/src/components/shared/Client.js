@@ -8,19 +8,19 @@ import REST from '../resources/REST';
 
 import config from '../../config';
 
-function Client({ setSubscribeState, recordTimestamp, authenticated }) {
+function Client({ setSubscribeState, recordTimestamp }) {
   return (
     <Row className="up-row">
       {config.subscriberTypes.map((subscriberType) => (
         <Col key={subscriberType} xs={12} lg={12 / config.subscriberTypes.length}>
           {subscriberType === 'SSE' ? (
-            <SSE setSubscribeState={setSubscribeState} authenticated={authenticated} />
+            <SSE setSubscribeState={setSubscribeState} />
           ) : subscriberType === 'MQTTWS' ? (
-            <MQTTWS setSubscribeState={setSubscribeState} authenticated={authenticated} />
+            <MQTTWS setSubscribeState={setSubscribeState} />
           ) : subscriberType === 'REST' ? (
             <REST recordTimestamp={recordTimestamp} />
           ) : (
-            <WS setSubscribeState={setSubscribeState} authenticated={authenticated} />
+            <WS setSubscribeState={setSubscribeState} />
           )}
         </Col>
       ))}

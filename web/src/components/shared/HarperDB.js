@@ -6,12 +6,10 @@ import config from '../../config';
 function HarperDB() {
   return (
     <div className="harperdb-row">
-      {config.hdbLocations.length > 1 && (
-        <div className="load-balancer top">
-          <i className="fas fa-compass me-2" />
-          GEO-DNS ROUTING
-        </div>
-      )}
+      <div className="load-balancer top">
+        <i className="fas fa-compress-arrows-alt me-2" />
+        CHANGE DATA CAPTURE
+      </div>
       <div className="instance-container">
         <Row>
           {config.hdbLocations.map((location) => (
@@ -32,12 +30,10 @@ function HarperDB() {
           ))}
         </Row>
       </div>
-      {config.hdbLocations.length > 1 && (
-        <div className="load-balancer bottom">
-          <i className="fas fa-compass me-2" />
-          GEO-DNS ROUTING
-        </div>
-      )}
+      <div className="load-balancer bottom">
+        <i className="fas fa-share-alt-square me-2" />
+        NATIVE INTERFACES
+      </div>
     </div>
   );
 }

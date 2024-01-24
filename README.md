@@ -1,8 +1,27 @@
-# HarperDB EdgeTL
+# HarperDB ActiveSync
 
 A demonstration of HarperDB's ability to subscribe to changes in external databases and deliver REST and Real-Time interfaces across the edge.
 
 ---
+
+### Prerequisites
+
+You must enable HTTPS and CORS in HarperDB's config (default: ~/hdb/harperdb-config.yaml) to accept requests from specified domain over a secure connection. 
+
+- Update the `http` section's `securePort` attribute to `9926`, and set the `port` attribute to `null`. By default, HarperDB uses a self-signed certificate, which will require you to open the API url (https://localhost:9926/api) directly in a browser and accept the certificate. 
+- Update the `http` section's `CORS` attribute to `true`, and the `corsAccessList` attribute to have the nested value of `'*'`
+
+```
+http:
+  compressionThreshold: 1200
+  cors: true
+  corsAccessList:
+    - '*'
+  keepAliveTimeout: 30000
+  port: null
+  securePort: 9926
+  timeout: 120000
+```
 
 ### Setup
 
